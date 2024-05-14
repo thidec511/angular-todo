@@ -23,7 +23,7 @@ jobs:
     - name: Build the Docker image
       env:
         DOCKER_USER: ${{secrets.DOCKER_USERNAME}}
-      run: docker build . --file Dockerfile --tag $DOCKER_USER/todolist:latest
+      run: docker build angular-todo/angular-todo --file Dockerfile --tag $DOCKER_USER/todolist:latest
     - name: Docker push
       env:
         DOCKER_USER: ${{secrets.DOCKER_USERNAME}}
